@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 
@@ -13,4 +12,3 @@ func main() {
 	router.HandleFunc("/", Handler).Methods("GET")
 	log.Fatal(http.ListenAndServe(":3030", router))
 }
-func Handler(w http.ResponseWriter, r *http.Request) { fmt.Fprintf(w, "Wow, SUCH Test") }
